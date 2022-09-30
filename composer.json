@@ -1,22 +1,24 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "kvnc/spammer-shield",
+    "description": "This package has multiple solutions for the spam form submissions",
     "keywords": [
-        ":vendor_name",
+        "kvnc",
         "laravel",
-        ":package_slug"
+        "spammer-shield",
+        "spam-bots",
+        "spam-form-submissions"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/kvnc/spammer-shield",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Kıvanç İnci",
+            "email": "kivanc.inci83@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.0",
         "spatie/laravel-package-tools": "^1.13.0",
         "illuminate/contracts": "^9.0"
     },
@@ -35,13 +37,11 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
-        }
+            "Kvnc\\SpammerShield\\": "src"}
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Kvnc\\SpammerShield\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -56,10 +56,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "SpammerShieldServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "SpammerShield": "SpammerShield"
             }
         }
     },
