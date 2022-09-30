@@ -10,5 +10,6 @@ return [
     'is_timeout_filter_enabled' => env('SPAMMER_SHIELD_IS_TIMEOUT_FILTER_ENABLED', false),
     'google_recaptcha_site_key' => env('SPAMMER_SHIELD_GOOGLE_SITE_KEY', ''),
     'google_recaptcha_secret_key' => env('SPAMMER_SHIELD_GOOGLE_SECRET_KEY', ''),
+    'is_action_taken' => false
 
 ];
