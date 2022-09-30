@@ -2,7 +2,9 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kvnc/spammer-shield.svg?style=flat-square)](https://packagist.org/packages/kvnc/spammer-shield)
 [![Build](https://github.com/BackendDevops/spammer-shield/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/BackendDevops/spammer-shield/actions/workflows/run-tests.yml)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/kvnc/spammer-shield/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/kvnc/spammer-shield/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![PHPStan](https://github.com/BackendDevops/spammer-shield/actions/workflows/phpstan.yml/badge.svg?branch=main)](https://github.com/BackendDevops/spammer-shield/actions/workflows/phpstan.yml)
+[![Fix PHP code style issues](https://github.com/BackendDevops/spammer-shield/actions/workflows/fix-php-code-style-issues.yml/badge.svg?branch=main&event=push)](https://github.com/BackendDevops/spammer-shield/actions/workflows/fix-php-code-style-issues.yml)
+[![PHPMD](https://github.com/BackendDevops/spammer-shield/actions/workflows/phpmd.yml/badge.svg?branch=main&event=push)](https://github.com/BackendDevops/spammer-shield/actions/workflows/phpmd.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/kvnc/spammer-shield.svg?style=flat-square)](https://packagist.org/packages/kvnc/spammer-shield)
 
 ## What This Package Does
