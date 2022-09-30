@@ -1,11 +1,11 @@
 <?php
 
-namespace VendorName\Skeleton\Facades;
+namespace Kvnc\SpamShield\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \VendorName\Skeleton\Shield
+ * @see \Kvnc\SpamShield\Shield
  */
 class SpammerShield extends Facade
 {
