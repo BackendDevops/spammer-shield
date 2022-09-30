@@ -3,9 +3,14 @@
 namespace Kvnc\SpammerShield\Views;
 
 use Illuminate\View\View;
+use Kvnc\SpammerShield\Shield;
 
 class SpammerShieldViewComposer
 {
+    public function __construct(protected Shield $shield)
+    {
+    }
+
     public function compose(View $view)
     {
         $config = $this->shield->getConfig();
