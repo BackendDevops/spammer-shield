@@ -2,8 +2,8 @@
 
 namespace Kvnc\SpammerShield\Tests;
 
-use Orchestra\Testbench\TestCase as Orchestra;
 use Kvnc\SpammerShield\SpammerShieldServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
