@@ -1,7 +1,7 @@
 # Description of Kvc/Spammer-Shield
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/kvnc/spammer-shield.svg?style=flat-square)](https://packagist.org/packages/kvnc/spammer-shield)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/kvnc/spammer-shield/run-tests?label=tests)](https://github.com/kvnc/spammer-shield/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Build](https://github.com/BackendDevops/spammer-shield/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/BackendDevops/spammer-shield/actions/workflows/run-tests.yml)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/kvnc/spammer-shield/Fix%20PHP%20code%20style%20issues?label=code%20style)](https://github.com/kvnc/spammer-shield/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/kvnc/spammer-shield.svg?style=flat-square)](https://packagist.org/packages/kvnc/spammer-shield)
 
