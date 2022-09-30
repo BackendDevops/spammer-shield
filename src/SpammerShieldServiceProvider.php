@@ -30,6 +30,7 @@ class SpammerShieldServiceProvider extends PackageServiceProvider
     protected function registerBindings(): self
     {
         $this->app->bind(Shield::class);
+
         return $this;
     }
 
