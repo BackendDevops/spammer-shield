@@ -2,14 +2,13 @@
 
 namespace Kvnc\SpamShield\Http\Middleware;
 
-use Illuminate\Http\Request;
 use Closure;
+use Illuminate\Http\Request;
 use Kvnc\SpammerShield\Exceptions\SpamShieldException;
 use Kvnc\SpammerShield\Shield;
 
 class SpammerShieldMiddleware
 {
-
     public function handle(Request $request, Closure $next)
     {
         if (! $request->isMethod('POST')) {
@@ -17,10 +16,10 @@ class SpammerShieldMiddleware
         }
         try {
             app(Shield::class)->checkRules($request);
-        }catch (SpamShieldException | \Throwable $e)
-        {
+        } catch (SpamShieldException | \Throwable $e) {
             abort(404);
         }
+
         return $next($request);
     }
 }

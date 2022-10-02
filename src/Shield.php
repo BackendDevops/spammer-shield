@@ -20,12 +20,10 @@ class Shield
 
     protected function calculateFormTime(Request $request)
     {
-
     }
 
     protected function googleCheck(Request $request)
     {
-
     }
 
     /**
@@ -33,18 +31,16 @@ class Shield
      */
     protected function checkHoneypotInput(Request $request): bool
     {
-        if (!$request->has($this->config->input_name)){
+        if (! $request->has($this->config->input_name)) {
             return true;
         }
-        throw_if(!empty($request->input($this->config->input_name)),SpamShieldException::class);
+        throw_if(! empty($request->input($this->config->input_name)), SpamShieldException::class);
 
         return true;
-
     }
 
     protected function checkRandomQuestion(Request $request)
     {
-
     }
 
     /**
@@ -52,14 +48,12 @@ class Shield
      */
     public function checkRules(Request $request)
     {
-
-        if (!$this->config->is_enabled){
-            return ;
+        if (! $this->config->is_enabled) {
+            return;
         }
         $this->checkHoneypotInput($request);
         $this->checkRandomQuestion($request);
         $this->calculateFormTime($request);
         $this->googleCheck($request);
-
     }
 }
