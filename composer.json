@@ -60,7 +60,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SpammerShieldServiceProvider"
+                "\\Kvnc\\SpammerShield\\SpammerShieldServiceProvider"
             ],
             "aliases": {
                 "SpammerShield": "SpammerShield"
