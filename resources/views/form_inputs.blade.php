@@ -3,6 +3,7 @@
 @endif
 
 @if($is_google_enabled)
+
 @endif
 
 @if($is_random_question_enabled)

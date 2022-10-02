@@ -4,6 +4,7 @@ namespace Kvnc\SpammerShield;
 
 use Illuminate\Http\Request;
 use Kvnc\SpammerShield\Exceptions\SpamShieldException;
+use ReCaptcha\ReCaptcha;
 use Throwable;
 
 class Shield
@@ -24,8 +25,18 @@ class Shield
     {
     }
 
+    /**
+     * @throws Throwable
+     */
     protected function googleCheck(Request $request)
     {
+        $ip = $request->getClientIp();
+        $captcha = $request->input('g-recaptcha-response');
+        $recaptcha = new ReCaptcha($this->config->google_recaptcha_secret_key);
+        $resp = $recaptcha->setExpectedHostname($request->getHost())
+            ->verify($captcha, $ip);
+        throw_if(!$resp->isSuccess(),SpamShieldException::class);
+
     }
 
     /**
