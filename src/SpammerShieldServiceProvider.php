@@ -51,11 +51,12 @@ class SpammerShieldServiceProvider extends PackageServiceProvider
         });
         Blade::directive('googleRecaptchaV3Js', function () {
             $script = '<script src="https://www.google.com/recaptcha/api.js" defer></script>';
+
             return '<?php echo $script ?>';
         });
         Blade::directive('googleRecaptchaV3', function ($key) {
+            $html = '<div class="g-recaptcha" data-sitekey="'.$key.'"></div>';
 
-            $html =  '<div class="g-recaptcha" data-sitekey="'.$key.'"></div>';
             return '<?php echo  $html?>';
         });
 
