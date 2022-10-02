@@ -83,8 +83,9 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
-
+This package derived from Spatie's laravel package base
 - [kvnc](https://github.com/BackendDevops)
+- [spatie](https://github.com/spatie)
 - [All Contributors](../../contributors)
 
 ## License

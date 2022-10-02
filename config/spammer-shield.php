@@ -11,5 +11,8 @@ return [
     'google_recaptcha_site_key' => env('SPAMMER_SHIELD_GOOGLE_SITE_KEY', ''),
     'google_recaptcha_secret_key' => env('SPAMMER_SHIELD_GOOGLE_SECRET_KEY', ''),
     'is_action_taken' => false,
+    'random_questions' => [
+        'question' => 'answer'
+    ],
 
 ];

@@ -2,10 +2,13 @@
 
 namespace Kvnc\SpammerShield;
 
+use Illuminate\Contracts\Container\BindingResolutionException;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Kvnc\SpammerShield\Views\SpammerShieldViewComponent;
 use Kvnc\SpammerShield\Views\SpammerShieldViewComposer;
+use Kvnc\SpamShield\Http\Middleware\SpammerShieldMiddleware;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -20,11 +23,16 @@ class SpammerShieldServiceProvider extends PackageServiceProvider
             ->hasViews();
     }
 
+    /**
+     * @throws BindingResolutionException
+     */
     public function packageBooted()
     {
         $this
             ->registerBindings()
             ->registerBladeClasses();
+        $router = $this->app->make(Router::class);
+        $router->aliasMiddleware('spammer-shield', SpammerShieldMiddleware::class);
     }
 
     protected function registerBindings(): self
@@ -36,10 +44,10 @@ class SpammerShieldServiceProvider extends PackageServiceProvider
 
     protected function registerBladeClasses(): self
     {
-        View::composer('spammer-shield::form-fields', SpammerShieldViewComposer::class);
+        View::composer('spammer-shield::form_inputs', SpammerShieldViewComposer::class);
         Blade::component('spammer-shield', SpammerShieldViewComponent::class);
         Blade::directive('spammerShield', function () {
-            return "<?php echo view('spammer-shield::form-fields'); ?>";
+            return "<?php echo view('spammer-shield::form_inputs'); ?>";
         });
 
         return $this;

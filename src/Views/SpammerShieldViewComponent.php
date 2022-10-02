@@ -10,6 +10,6 @@ class SpammerShieldViewComponent extends Component
     {
         $config = config('spammer-shield');
 
-        return view('spammer-shield::form-fields', $config);
+        return view('spammer-shield::form_inputs', $config);
     }
 }
