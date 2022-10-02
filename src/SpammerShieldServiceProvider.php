@@ -54,8 +54,7 @@ class SpammerShieldServiceProvider extends PackageServiceProvider
         });
         Blade::directive('googleRecaptchaV3', function () {
             $config = (object) config('spammer-shield');
-
-            return "<?php echo '<div class='g-recaptcha' data-sitekey='".$config->google_recaptcha_site_key."'></div>'?>";
+            return '<div class="g-recaptcha" data-sitekey="'.$config->google_recaptcha_site_key.'">';
         });
 
         return $this;
