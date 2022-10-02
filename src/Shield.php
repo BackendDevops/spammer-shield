@@ -8,7 +8,8 @@ use Throwable;
 
 class Shield
 {
-    public function __construct(protected object $config)
+    protected object $config;
+    public function __construct()
     {
         $this->config = $this->getConfig();
     }
