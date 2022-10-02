@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Kvnc\SpammerShield\Views\SpammerShieldViewComponent;
 use Kvnc\SpammerShield\Views\SpammerShieldViewComposer;
-use Kvnc\SpamShield\Http\Middleware\SpammerShieldMiddleware;
+use Kvnc\SpammerShield\Http\Middleware\SpammerShieldMiddleware;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
