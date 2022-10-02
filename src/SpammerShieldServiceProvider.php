@@ -53,7 +53,7 @@ class SpammerShieldServiceProvider extends PackageServiceProvider
             return "<?php echo '<script src=\"https://www.google.com/recaptcha/api.js\" defer></script>' ?>";
         });
         Blade::directive('googleRecaptchaV3', function ($key) {
-            return "<?php echo  '<div class=\"g-recaptcha\" data-sitekey=\"'.$key.'\"></div>'?>";
+            return '<?php echo  "<div class=\'g-recaptcha\' data-sitekey=\'".config("spammer-shield")["google_recaptcha_site_key"]."\'></div>";?>';
         });
 
         return $this;
