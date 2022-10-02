@@ -50,13 +50,10 @@ class SpammerShieldServiceProvider extends PackageServiceProvider
             return "<?php echo view('spammer-shield::form_inputs'); ?>";
         });
         Blade::directive('googleRecaptchaV3Js', function () {
-            $script = '<script src="https://www.google.com/recaptcha/api.js" defer></script>';
-            return '<?php echo $script ?>';
+            return "<?php echo '<script src=\"https://www.google.com/recaptcha/api.js\" defer></script>' ?>";
         });
         Blade::directive('googleRecaptchaV3', function ($key) {
-
-            $html =  '<div class="g-recaptcha" data-sitekey="'.$key.'"></div>';
-            return '<?php echo  $html?>';
+            return "<?php echo  '<div class=\"g-recaptcha\" data-sitekey=\"'.$key.'\"></div>'?>";
         });
 
         return $this;
