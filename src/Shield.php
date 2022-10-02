@@ -35,8 +35,7 @@ class Shield
         $recaptcha = new ReCaptcha($this->config->google_recaptcha_secret_key);
         $resp = $recaptcha->setExpectedHostname($request->getHost())
             ->verify($captcha, $ip);
-        throw_if(!$resp->isSuccess(),SpamShieldException::class);
-
+        throw_if(! $resp->isSuccess(), SpamShieldException::class);
     }
 
     /**
