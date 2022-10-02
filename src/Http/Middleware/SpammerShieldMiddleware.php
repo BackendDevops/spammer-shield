@@ -1,6 +1,6 @@
 <?php
 
-namespace Kvnc\SpamShield\Http\Middleware;
+namespace Kvnc\SpammerShield\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
